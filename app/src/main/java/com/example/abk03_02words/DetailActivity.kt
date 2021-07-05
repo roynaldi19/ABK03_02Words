@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.abk03_02words.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-
+    /**
+     * Provides global access to these variables from anywhere in the app
+     * via DetailActivity.<variable> without needing to create
+     * a DetailActivity instance.
+     */
     companion object {
         const val LETTER = "letter"
-        val SEARCH_PREFIX = "https://www.google.com/search?q="
+        const val SEARCH_PREFIX = "https://www.google.com/search?q="
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

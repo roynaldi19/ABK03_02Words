@@ -10,6 +10,9 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
+/**
+ * Adapter for the [RecyclerView] in [MainActivity].
+ */
 class LetterAdapter :
     RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
 
@@ -34,6 +37,7 @@ class LetterAdapter :
         val layout = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_view, parent, false)
+
         // Setup custom accessibility delegate to set the text read
         layout.accessibilityDelegate = Accessibility
         return LetterViewHolder(layout)
@@ -45,10 +49,17 @@ class LetterAdapter :
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list.get(position)
         holder.button.text = item.toString()
+
+        // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
             val context = holder.view.context
+            // Create an intent with a destination of DetailActivity
             val intent = Intent(context, DetailActivity::class.java)
+            // Add the selected letter to the intent as extra data
+            // The text of Buttons are [CharSequence], a list of characters,
+            // so it must be explicitly converted into a [String].
             intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            // Start an activity using the data and destination from the Intent.
             context.startActivity(intent)
         }
     }
