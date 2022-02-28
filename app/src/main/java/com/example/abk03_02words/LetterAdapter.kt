@@ -1,5 +1,6 @@
 package com.example.abk03_02words
 
+import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +8,6 @@ import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.annotation.RequiresApi
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 class LetterAdapter :
@@ -15,7 +15,7 @@ class LetterAdapter :
 
     private val list = ('A').rangeTo('Z').toList()
 
-    class LetterViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    class LetterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val button: Button = view.findViewById(R.id.button_item)
     }
 
@@ -25,6 +25,7 @@ class LetterAdapter :
         val layout = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_view, parent, false)
+
         layout.accessibilityDelegate = Accessibility
         return LetterViewHolder(layout)
     }
@@ -32,11 +33,11 @@ class LetterAdapter :
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list[position]
         holder.button.text = item.toString()
-
         holder.button.setOnClickListener {
-            val action =
-                LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
-            holder.view.findNavController().navigate(action)
+            val context = holder.itemView.context
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            context.startActivity(intent)
         }
     }
 
@@ -47,6 +48,7 @@ class LetterAdapter :
             info: AccessibilityNodeInfo?
         ) {
             super.onInitializeAccessibilityNodeInfo(host, info)
+
             val customString = host?.context?.getString(R.string.look_up_words)
             val customClick =
                 AccessibilityNodeInfo.AccessibilityAction(

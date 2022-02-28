@@ -18,8 +18,8 @@ class WordAdapter(private val letterId: String, context: Context) :
     private val filteredWords: List<String>
 
     init {
-
         val words = context.resources.getStringArray(R.array.words).toList()
+
         filteredWords = words
             .filter { it.startsWith(letterId, ignoreCase = true) }
             .shuffled()
@@ -28,30 +28,25 @@ class WordAdapter(private val letterId: String, context: Context) :
     }
 
     class WordViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val button = view.findViewById<Button>(R.id.button_item)
+        val button: Button = view.findViewById(R.id.button_item)
     }
 
-    override fun getItemCount(): Int = filteredWords.size
+    override fun getItemCount() = filteredWords.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val layout = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_view, parent, false)
-
         layout.accessibilityDelegate = Accessibility
-
         return WordViewHolder(layout)
     }
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-
         val item = filteredWords[position]
         val context = holder.view.context
-
         holder.button.text = item
-
         holder.button.setOnClickListener {
-            val queryUrl: Uri = Uri.parse("${WordListFragment.SEARCH_PREFIX}${item}")
+            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             context.startActivity(intent)
         }
