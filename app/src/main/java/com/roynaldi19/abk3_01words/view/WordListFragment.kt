@@ -1,4 +1,4 @@
-package com.example.abk03_02words.view
+package com.roynaldi19.abk3_01words.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.abk03_02words.adapter.WordAdapter
-import com.example.abk03_02words.databinding.FragmentWordListBinding
+import com.roynaldi19.abk3_01words.adapter.WordAdapter
+import com.roynaldi19.abk3_01words.databinding.FragmentWordListBinding
 
 
 class WordListFragment : Fragment() {

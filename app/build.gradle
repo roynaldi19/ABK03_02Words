@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.abk03_02words"
+        applicationId "com.roynaldi19.abk3_01words"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

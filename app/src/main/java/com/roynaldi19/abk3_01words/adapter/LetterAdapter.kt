@@ -1,4 +1,4 @@
-package com.example.abk03_02words.adapter
+package com.roynaldi19.abk3_01words.adapter
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.abk03_02words.R
-import com.example.abk03_02words.view.LetterListFragmentDirections
+import com.roynaldi19.abk3_01words.R
+import com.roynaldi19.abk3_01words.view.LetterListFragmentDirections
 
 class LetterAdapter :
     RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {

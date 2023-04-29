@@ -1,11 +1,11 @@
-package com.example.abk03_02words
+package com.roynaldi19.abk3_01words
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.abk03_02words.databinding.ActivityMainBinding
+import com.roynaldi19.abk3_01words.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
