@@ -1,4 +1,4 @@
-package com.roynaldi19.abk3_01words.adapter
+package com.roynaldi19.gd1_03words.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -11,8 +11,8 @@ import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.roynaldi19.abk3_01words.R
-import com.roynaldi19.abk3_01words.view.WordListFragment
+import com.roynaldi19.gd1_03words.R
+import com.roynaldi19.gd1_03words.view.WordListFragment
 
 class WordAdapter(private val letterId: String, context: Context) :
     RecyclerView.Adapter<WordAdapter.WordViewHolder>() {

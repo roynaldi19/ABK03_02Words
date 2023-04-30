@@ -6,7 +6,7 @@
     app:startDestination="@id/letterListFragment">
     <fragment
         android:id="@+id/letterListFragment"
-        android:name="com.roynaldi19.abk3_01words.view.LetterListFragment"
+        android:name="com.roynaldi19.gd1_03words.view.LetterListFragment"
         android:label="fragment_letter_list"
         tools:layout="@layout/fragment_letter_list" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/wordListFragment"
-        android:name="com.roynaldi19.abk3_01words.view.WordListFragment"
+        android:name="com.roynaldi19.gd1_03words.view.WordListFragment"
         android:label="fragment_word_list"
         tools:layout="@layout/fragment_word_list" >
         <argument

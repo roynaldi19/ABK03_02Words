@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ABK3_01Words</string>
+    <string name="app_name">GD1_03Words</string>
     <string name="detail_prefix">Words That Start With</string>
     <string name="action_switch_layout">Switch Layout</string>
     <string name="look_up_word">Look up word in a Browser Search</string>

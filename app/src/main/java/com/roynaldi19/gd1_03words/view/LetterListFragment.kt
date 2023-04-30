@@ -1,4 +1,4 @@
-package com.roynaldi19.abk3_01words.view
+package com.roynaldi19.gd1_03words.view
 
 import android.os.Bundle
 import android.view.*
@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.roynaldi19.abk3_01words.R
-import com.roynaldi19.abk3_01words.adapter.LetterAdapter
-import com.roynaldi19.abk3_01words.databinding.FragmentLetterListBinding
+import com.roynaldi19.gd1_03words.R
+import com.roynaldi19.gd1_03words.adapter.LetterAdapter
+import com.roynaldi19.gd1_03words.databinding.FragmentLetterListBinding
 
 class LetterListFragment : Fragment() {
 

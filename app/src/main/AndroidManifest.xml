@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.roynaldi19.abk3_01words">
+    package="com.roynaldi19.gd1_03words">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABK03_02Words">
-        <activity android:name="com.roynaldi19.abk3_01words.MainActivity">
+        <activity android:name="com.roynaldi19.gd1_03words.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
